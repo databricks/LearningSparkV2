@@ -27,6 +27,7 @@ object Example4_1 {
       StructField("state", StringType, false)))
     // read and create a temporary view
     spark.read.schema(schema).json(jsonFile).createOrReplaceTempView("us_population_tbl")
+    print(spark.table("us_population_tbl").schema.toDDL)
     // example how you read data from the temporary view back into a DataFrame
     val usPopDF = spark.sql("SELECT * FROM us_population_tbl")
     // Query 1: select all cities, states, and zipcode where the population is

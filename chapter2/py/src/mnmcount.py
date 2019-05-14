@@ -21,7 +21,6 @@ if __name__ == "__main__":
         .option("header", "true")
         .option("inferSchema", "true")
         .load(mnm_file))
-    # Register a temp View
     mnm_df.show(n=5, truncate=False)
     # aggregate count of all colors and groupBy state and color
     # orderBy descending order
