@@ -1,6 +1,6 @@
 // scalastyle:off println
 
-package main.scala.chapter1
+package main.scala.chapter2
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
@@ -47,8 +47,6 @@ object MnMcount {
       .orderBy(desc("Total"))
     // show the resulting aggregation for California
     ca_count_mnm_df.show(10)
-    //stop the SparkSession
-    spark.stop()
   }
 }
 // scalastyle:on println
