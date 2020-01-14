@@ -27,12 +27,12 @@ object Example3_7 {
       StructField("Campaigns", ArrayType(StringType), false)))
 
     //Create a DataFrame by reading from the JSON file a predefined Schema
-    val blogs_df = spark.read.schema(schema).json(jsonFile)
+    val blogsDF = spark.read.schema(schema).json(jsonFile)
     print()
     //show the DataFrame schema as output
-    blogs_df.show(truncate = false)
+    blogsDF.show(truncate = false)
     // print the schemas
-    print(blogs_df.printSchema)
-    print(blogs_df.schema)
+    print(blogsDF.printSchema)
+    print(blogsDF.schema)
   }
 }
