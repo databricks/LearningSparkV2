@@ -2,6 +2,7 @@ package main.scala.chapter3
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types._
+import org.apache.spark.sql.functions.{col, expr}
 
 object Example3_7 {
   def main(args: Array[String]) {
@@ -34,5 +35,12 @@ object Example3_7 {
     // print the schemas
     print(blogsDF.printSchema)
     print(blogsDF.schema)
+    // Show columns and expressions
+    blogsDF.select(expr("Hits") * 2).show(2)
+    blogsDF.select(col("Hits") * 2).show(2)
+    blogsDF.select(expr("Hits * 2")).show(2)
+   // show heavy hitters
+   blogsDF.withColumn("Big Hitters", (expr("Hits > 10000"))).show()
+
   }
 }
