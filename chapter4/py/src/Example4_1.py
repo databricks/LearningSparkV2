@@ -47,5 +47,3 @@ if __name__ == "__main__":
                   END AS Population_Density
                   FROM us_population_tbl
                   ORDER BY pop DESC""").show(10, truncate=False)
-
-
