@@ -3,10 +3,10 @@ package main.java.chapter6;
 import java.io.Serializable;
 // Usage public class
 public class UsageCost implements Serializable {
-    int uid;                // user id
-    String uname;            // username
-    int usage;                // usage
-    double cost;           // cost
+    private int uid;                // user id
+    private String uname;            // username
+    private int usage;                // usage
+    private double cost;           // cost
 
     public UsageCost(int uid, String uname, int usage, double v) {
         this.uid = uid;

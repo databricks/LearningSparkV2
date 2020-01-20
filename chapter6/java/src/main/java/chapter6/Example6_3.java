@@ -24,6 +24,7 @@ public class Example6_3 {
         // Create an explicit Encoder
         Encoder<Usage> usageEncoder = Encoders.bean(Usage.class);
         Random rand = new Random();
+        rand.setSeed(42);
         List<Usage> data = new ArrayList<Usage>();
         // create 1000 instances of Java Usage class
         for (int i = 0; i < 1000; i++) {
