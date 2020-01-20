@@ -4,9 +4,10 @@ name := "main/java/chapter6"
 //version of our package
 version := "1.0"
 //version of Scala
-scalaVersion := "2.11.12"
+scalaVersion := "2.12.10"
 // spark library dependencies
+// change this to Spark 3.0.0 when released
 libraryDependencies ++= Seq(
-  "org.apache.spark" %% "spark-core" % "2.4.1",
-  "org.apache.spark" %% "spark-sql"  % "2.4.1"
+  "org.apache.spark" %% "spark-core" % "3.0.0-preview2",
+  "org.apache.spark" %% "spark-sql"  % "3.0.0-preview2"
 )
