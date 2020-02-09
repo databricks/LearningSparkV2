@@ -29,7 +29,6 @@ object Example3_7 {
 
     //Create a DataFrame by reading from the JSON file a predefined Schema
     val blogsDF = spark.read.schema(schema).json(jsonFile)
-    print()
     //show the DataFrame schema as output
     blogsDF.show(truncate = false)
     // print the schemas

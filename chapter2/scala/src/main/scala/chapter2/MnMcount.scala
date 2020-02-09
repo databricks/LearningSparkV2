@@ -26,6 +26,7 @@ object MnMcount {
       .option("header", "true")
       .option("inferSchema", "true")
       .load(mnm_file)
+
     // aggregate count of all colors and groupBy state and color
     // orderBy descending order
     val count_mnm_df = mnm_df.select("State", "Color", "Count")
@@ -35,9 +36,17 @@ object MnMcount {
         .orderBy(desc("Total"))
     // show all the resulting aggregation for all the dates and colors
     count_mnm_df.show(60)
-    println("Total Rows = %d", (count_mnm_df.count()))
+    println(s"Total Rows = {count_mnm_df.count()}")
     println()
-    //
+
+    // create a temporary table
+    mnm_df.createOrReplaceTempView("MNM_TABLE_NAME")
+    val count_mnm_sql_df = spark.sql("""SELECT State, Color, Count, sum(Count) AS Total
+      FROM MNM_TABLE_NAME
+      GROUP BY State, Color, Count
+      ORDER BY Total DESC""")
+    count_mnm_df.show(60)
+
     // find the aggregate count for California by filtering
     val ca_count_mnm_df = mnm_df.select("*")
       .where(col("State") === "CA")

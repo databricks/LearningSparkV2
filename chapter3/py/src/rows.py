@@ -2,10 +2,10 @@ from pyspark.sql import Row
 from pyspark.sql.types import *
 from pyspark.sql import SparkSession
 
-spark = SparkSession \
-        .builder \
-	.appName("Authors") \
-	.getOrCreate()
+spark = (SparkSession
+        .builder
+	.appName("Authors")
+	.getOrCreate())
 
 schema = StructType([
 	StructField("Author" , StringType(), False), 
