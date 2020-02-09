@@ -38,7 +38,7 @@ if __name__ == "__main__":
         spark.sql("CREATE TABLE us_population_tbl (zipcode STRING, city STRING, loc ARRAY<DOUBLE>, pop INT)")
 
         # use Catalog to list the database and tables
-        list_tables(spark)
+        list_tables(spark, "us_population_tbl")
         # drop the database and create unmanaged tables
         spark.sql("DROP DATABASE IF EXISTS learn_spark_v2 CASCADE")
         spark.sql("CREATE DATABASE learn_spark_v2")
@@ -48,7 +48,7 @@ if __name__ == "__main__":
         It seems like you cannot bind variables as argument in OPTIONs statement in SQL DDL
         spark.sql("CREATE TABLE us_population_tbl(zipcode STRING, city STRING, loc ARRAY<DOUBLE>, pop INT) USING org.apache.spark.sql.json OPTIONS(path json_file)")
         """
-        list_tables(spark)
+        list_tables(spark, "us_population_tbl")
 
 
 
