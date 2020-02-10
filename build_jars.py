@@ -13,6 +13,6 @@ def build_jar_files(dir):
 
 
 if __name__ == '__main__':
-    chapters = ["chapter2", "chapter3", "chapter4", "chapter6"]
+    chapters = ["chapter2", "chapter3", "chapter4", "chapter6", "chapter8"]
     with Pool(5) as p:
         p.map(build_jar_files, chapters)
