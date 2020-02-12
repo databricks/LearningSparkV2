@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.OneHotEncoderModel","timestamp":1555546857915,"sparkVersion":"2.4.0","uid":"oneHotEncoder_6a45e1370f07","paramMap":{"inputCols":["instant_bookableIndex"],"outputCols":["instant_bookableOHE"]},"defaultParamMap":{"handleInvalid":"error","dropLast":true}}

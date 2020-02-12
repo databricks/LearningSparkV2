@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.OneHotEncoderModel","timestamp":1555546928278,"sparkVersion":"2.4.0","uid":"oneHotEncoder_d2d3e572e18f","paramMap":{"outputCols":["room_typeOHE"],"inputCols":["room_typeIndex"]},"defaultParamMap":{"handleInvalid":"error","dropLast":true}}

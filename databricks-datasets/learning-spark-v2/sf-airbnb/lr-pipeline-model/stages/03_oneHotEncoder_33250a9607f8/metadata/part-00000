@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.OneHotEncoderModel","timestamp":1555546841199,"sparkVersion":"2.4.0","uid":"oneHotEncoder_33250a9607f8","paramMap":{"inputCols":["cancellation_policyIndex"],"outputCols":["cancellation_policyOHE"]},"defaultParamMap":{"dropLast":true,"handleInvalid":"error"}}

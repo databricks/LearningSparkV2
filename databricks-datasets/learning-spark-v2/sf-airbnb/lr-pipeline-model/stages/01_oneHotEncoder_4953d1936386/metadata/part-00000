@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.OneHotEncoderModel","timestamp":1555546824501,"sparkVersion":"2.4.0","uid":"oneHotEncoder_4953d1936386","paramMap":{"outputCols":["host_is_superhostOHE"],"inputCols":["host_is_superhostIndex"]},"defaultParamMap":{"dropLast":true,"handleInvalid":"error"}}

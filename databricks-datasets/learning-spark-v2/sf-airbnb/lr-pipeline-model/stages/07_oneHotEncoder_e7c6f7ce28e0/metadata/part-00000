@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.OneHotEncoderModel","timestamp":1555546874656,"sparkVersion":"2.4.0","uid":"oneHotEncoder_e7c6f7ce28e0","paramMap":{"outputCols":["neighbourhood_cleansedOHE"],"inputCols":["neighbourhood_cleansedIndex"]},"defaultParamMap":{"handleInvalid":"error","dropLast":true}}
