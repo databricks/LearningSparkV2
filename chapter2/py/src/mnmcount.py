@@ -32,15 +32,6 @@ if __name__ == "__main__":
     # show all the resulting aggregation for all the dates and colors
     count_mnm_df.show(n=60, truncate=False)
     print("Total Rows = %d" % (count_mnm_df.count()))
-    count_mnm_df.explain(True)
-    print()
-    mnm_df.createOrReplaceTempView("MNM_TABLE_NAME")
-    print("Tables and Views:")
-    print(spark.catalog.listTables())
-    print()
-    # Execute the same in SQL
-    sql_count_mnn_df = spark.sql("SELECT State, Color, Count, sum(Count) AS Total FROM MNM_TABLE_NAME GROUP BY State, Color, Count ORDER BY Total DESC")
-    sql_count_mnn_df.explain(True)
     #
     # find the aggregate count for California by filtering
     ca_count_mnm_df = ( mnm_df.select("*")
