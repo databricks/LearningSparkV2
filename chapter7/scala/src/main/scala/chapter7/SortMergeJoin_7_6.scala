@@ -1,4 +1,4 @@
-package main.scala.chapter8
+package main.scala.chapter7
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types._
@@ -6,7 +6,7 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql.SaveMode
 import scala.util.Random
 
-object SortMergeJoin_8_6 {
+object SortMergeJoin_7_6 {
 
   // curried function to benchmark any code or function
   def benchmark(name: String)(f: => Unit) {
@@ -51,6 +51,7 @@ object SortMergeJoin_8_6 {
     usersOrdersDF.show(10, false)
     usersOrdersDF.cache()
     usersOrdersDF.explain(true)
+    //usersOrdersDF.explain("formated")
     // to view the SparkUI otherwise the program terminates and shutdowsn the UI
     Thread.sleep(200000000)
   }

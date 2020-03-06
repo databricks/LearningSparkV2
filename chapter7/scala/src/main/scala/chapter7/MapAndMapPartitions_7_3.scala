@@ -1,4 +1,4 @@
-package main.scala.chapter8
+package main.scala.chapter7
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types._
@@ -6,7 +6,7 @@ import org.apache.spark.sql.functions._
 import scala.math.sqrt
 import java.io.FileWriter
 
-object MapAndMapPartitions_8_3 {
+object MapAndMapPartitions_7_3 {
 
   // simulate a connection to a FS
   def getConnection (f: String): FileWriter = {

@@ -1,8 +1,8 @@
-package main.scala.chapter8
+package main.scala.chapter7
 
 import org.apache.spark.sql.SparkSession
 
-object SparkConfig_8_1 {
+object Partitions_7_2 {
 
 	def printConfigs(session: SparkSession) = {
 		// get conf
@@ -14,14 +14,15 @@ object SparkConfig_8_1 {
 	def main(args: Array[String]) {
 		// create a session
 		val spark = SparkSession.builder
-  			.config("spark.sql.shuffle.partitions", 5)
   			.master("local[*]")
-				.appName("SparkConfig")
+				.appName("Partitions")
 				.getOrCreate()
 
 		printConfigs(spark)
+		val numDF = spark.range(1000L * 1000 * 1000).repartition(16)
+		println(s"****** Number of Partiions in DataFrame: ${numDF.rdd.getNumPartitions}")
 		spark.conf.set("spark.sql.shuffle.partitions",  spark.sparkContext.defaultParallelism)
-		println(" ****** Setting Shuffle Partitions to Default Parallelism")
+		println("****** Setting Shuffle Partitions to Default Parallelism")
 		printConfigs(spark)
 	}
 }

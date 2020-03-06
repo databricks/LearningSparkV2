@@ -1,6 +1,6 @@
  //name of the package
  // To build simply type `sbt clean package`
-name := "main/scala/chapter8"
+name := "main/scala/chapter7"
 //version of our package
 version := "1.0"
 //version of Scala
