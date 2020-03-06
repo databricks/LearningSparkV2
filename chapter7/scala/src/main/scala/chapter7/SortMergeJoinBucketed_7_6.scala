@@ -1,4 +1,4 @@
-package main.scala.chapter8
+package main.scala.chapter7
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types._
@@ -6,7 +6,7 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql.SaveMode
 import scala.util.Random
 
-object SortMergeJoinBucketed_8_6 {
+object SortMergeJoinBucketed_7_6 {
 
   // curried function to benchmark any code or function
   def benchmark(name: String)(f: => Unit) {
@@ -49,18 +49,20 @@ object SortMergeJoinBucketed_8_6 {
     usersDF.orderBy(asc("uid"))
       .write.format("parquet")
       .mode(SaveMode.Overwrite)
-      .bucketBy(5, "uid")
+      // eual to number of cores I have on my laptop
+      .bucketBy(8, "uid")
       .saveAsTable("UsersTbl")
-    // create bucket and table for users_id
+      // create bucket and table for users_id
     spark.sql("DROP TABLE IF EXISTS OrdersTbl")
     ordersDF.orderBy(asc("users_id"))
       .write.format("parquet")
-      .bucketBy(5, "users_id")
+      .bucketBy(8, "users_id")
       .mode(SaveMode.Overwrite)
       .saveAsTable("OrdersTbl")
     // cache tables
     spark.sql("CACHE TABLE UsersTbl")
     spark.sql("CACHE TABLE OrdersTbl")
+    spark.sql("SELECT * from OrdersTbl LIMIT 20")
     // read data back in
     val usersBucketDF = spark.table("UsersTbl")
     val ordersBucketDF = spark.table("OrdersTbl")
@@ -68,6 +70,7 @@ object SortMergeJoinBucketed_8_6 {
     val joinUsersOrdersBucketDF = ordersBucketDF.join(usersBucketDF, $"users_id" === $"uid")
     joinUsersOrdersBucketDF.show(false)
     joinUsersOrdersBucketDF.explain(true)
+    //joinUsersOrdersBucketDF.explain("formatted")
 
     // to view the SparkUI otherwise the program terminates and shutdowsn the UI
     Thread.sleep(200000000)

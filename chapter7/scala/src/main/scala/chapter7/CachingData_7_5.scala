@@ -1,9 +1,9 @@
-package main.scala.chapter8
+package main.scala.chapter7
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.storage.StorageLevel
 
-object CachingData_8_5 {
+object CachingData_7_5 {
 
 	def printConfig(session: SparkSession, key:String) = {
 		// get conf
