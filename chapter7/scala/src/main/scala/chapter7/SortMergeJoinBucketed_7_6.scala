@@ -69,7 +69,7 @@ object SortMergeJoinBucketed_7_6 {
     // Now do the join on the bucketed DataFrames
     val joinUsersOrdersBucketDF = ordersBucketDF.join(usersBucketDF, $"users_id" === $"uid")
     joinUsersOrdersBucketDF.show(false)
-    joinUsersOrdersBucketDF.explain(true)
+    joinUsersOrdersBucketDF.explain()
     //joinUsersOrdersBucketDF.explain("formatted")
 
     // to view the SparkUI otherwise the program terminates and shutdowsn the UI

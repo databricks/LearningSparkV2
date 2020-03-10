@@ -15,13 +15,14 @@ object SparkConfig_7_1 {
 		// create a session
 		val spark = SparkSession.builder
   			.config("spark.sql.shuffle.partitions", 5)
-  			.master("local[*]")
+				.config("spark.executor.memory", "2g")
+				.master("local[*]")
 				.appName("SparkConfig")
 				.getOrCreate()
 
 		printConfigs(spark)
-		spark.conf.set("spark.sql.shuffle.partitions",  spark.sparkContext.defaultParallelism)
 		println(" ****** Setting Shuffle Partitions to Default Parallelism")
+		spark.conf.set("spark.sql.shuffle.partitions",  spark.sparkContext.defaultParallelism)
 		printConfigs(spark)
 	}
 }
