@@ -21,8 +21,8 @@ object SparkConfig_7_1 {
 				.getOrCreate()
 
 		printConfigs(spark)
-		spark.conf.set("spark.sql.shuffle.partitions",  spark.sparkContext.defaultParallelism)
 		println(" ****** Setting Shuffle Partitions to Default Parallelism")
+		spark.conf.set("spark.sql.shuffle.partitions",  spark.sparkContext.defaultParallelism)
 		printConfigs(spark)
 	}
 }

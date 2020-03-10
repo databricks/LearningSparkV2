@@ -7,6 +7,7 @@
 To run Scala code for this chapter use:
 
  * `spark-submit --class main.scala.chapter7.SparkConfig_7_1 jars/main-scala-chapter7_2.12-1.0.jar`
+ * `spark-submit --conf spark.sql.shuffle.partitions=5 --conf "spark.executor.memory=2g" --class main.scala.chapter7.SparkConfig_7_1 jars/main-scala-chapter7_2.12-1.0.jar`
  * `spark-submit --class main.scala.chapter7.Partitions_7_2 jars/main-scala-chapter7_2.12-1.0.jar`
  * `spark-submit --class main.scala.chapter7.MapAndMapPartitions_7_3 jars/main-scala-chapter7_2.12-1.0.jar`
  * `spark-submit --class main.scala.chapter7.CachingData_7_5 jars/main-scala-chapter7_2.12-1.0.jar`
