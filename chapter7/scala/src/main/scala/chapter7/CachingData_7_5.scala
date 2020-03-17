@@ -39,17 +39,22 @@ object CachingData_7_5 {
 		val (res2, tm2) = timer(df.count())
 		println(s"***** Count=${res2} and time=${tm2}")
 		// Persist on Disk
+		//df.persist(StorageLevel.MEMORY_ONLY)
 		df.persist(StorageLevel.DISK_ONLY)
 		val (res3, tm3) = timer(df.count())
 		println(s"***** Count=${res3} and time=${tm3}")
-		// unpersist
-		df.unpersist()
 		// create an temporary SQL view
 		df.createOrReplaceTempView("dfTable")
 		spark.sql("cache table dfTable")
 		val (res4, tm4) = timer(spark.sql("select count(*) from dfTable").show())
 		println(s"***** Count=${res4} and time=${tm4}")
 
+		// to view the SparkUI otherwise the program terminates and shutdowsn the UI
+		Thread.sleep(200000000)
+
+		// unpersist
+		df.unpersist()
+		//
 
 	}
 }
