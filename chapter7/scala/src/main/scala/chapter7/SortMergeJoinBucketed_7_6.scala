@@ -3,6 +3,7 @@ package main.scala.chapter7
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.functions._
+import org.apache.spark.storage.StorageLevel._
 import org.apache.spark.sql.SaveMode
 import scala.util.Random
 
@@ -43,6 +44,10 @@ object SortMergeJoinBucketed_7_6 {
     val ordersDF = (0 to 100000).map(r => (r, r, rnd.nextInt(100000), 10 * r* 0.2d, states(rnd.nextInt(5)), items(rnd.nextInt(5))))
           .toDF("transaction_id", "quantity", "users_id", "amount", "state", "items")
 
+    // cache them on Disk only so we can see the difference in size in the storage UI
+    usersDF.persist(DISK_ONLY)
+    ordersDF.persist(DISK_ONLY)
+
     // let's create five buckets, each DataFrame for their respective columns
     // create bucket and table for uid
     spark.sql("DROP TABLE IF EXISTS UsersTbl")
@@ -59,7 +64,7 @@ object SortMergeJoinBucketed_7_6 {
       .bucketBy(8, "users_id")
       .mode(SaveMode.Overwrite)
       .saveAsTable("OrdersTbl")
-    // cache tables
+    // cache tables in memory so that we can see the difference in size in the storage UI
     spark.sql("CACHE TABLE UsersTbl")
     spark.sql("CACHE TABLE OrdersTbl")
     spark.sql("SELECT * from OrdersTbl LIMIT 20")
