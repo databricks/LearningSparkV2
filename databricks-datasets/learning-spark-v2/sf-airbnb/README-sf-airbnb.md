@@ -4,7 +4,7 @@ This folder contains publicly available data from Airbnb, obtained from
 http://insideairbnb.com/get-the-data.html
 
 There are subfolders within this folder for specific data sets. See the
-individual README files within those folders for details.
+individual README files within those folderrs for details.
 
 ## License
 
