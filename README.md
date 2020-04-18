@@ -29,7 +29,7 @@ Instructions for how to build and run examples are in [README.md](chapter11/READ
 ###  Chapter 12
 Instructions for how to build and run examples are in [README.md](chapter12/README.md)
 
-If you are using Databricks to run the code examples, you can import a .dbc file containing all of the notebooks (not the stand-alone apps) from the [notebooks](notebooks) folder. To sign up for a free Databricks Community Edition account, go to www.databricks.com/try-databricks.
+**If you are using Databricks to run the code examples, you can import a .dbc file containing all of the notebooks (not the stand-alone apps) from the [notebooks](notebooks) folder. To sign up for a free Databricks Community Edition account, go to www.databricks.com/try-databricks.**
 
 Cheers,
 Have Fun!
