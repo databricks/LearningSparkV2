@@ -1,7 +1,7 @@
 # Learning Spark 2nd Edition
 GitHub repo for the "Learning Spark 2nd Edition" code examples and notebooks.
 
-You can build all the jars file for each chapter by running the Python script:
+You can build all the JAR files for each chapter by running the Python script:
 `python build_jars.py`
 
 ###  Chapter 1
@@ -13,22 +13,21 @@ Instructions for how to build and run examples are in [README.md](chapter3/READM
 ###  Chapter 4
 Instructions for how to build and run examples are in [README.md](chapter4/README.md)
 ###  Chapter 5
-Coming soon...
+Instructions for how to build and run examples are in [README.md](chapter5/README.md)
 ###  Chapter 6
 Instructions for how to build and run examples are in [README.md](chapter6/README.md)
 ###  Chapter 7
 Instructions for how to build and run examples are in [README.md](chapter7/README.md)
 ###  Chapter 8
-Coming soon...
+Instructions for how to build and run examples are in [README.md](chapter8/README.md)
 ###  Chapter 9
-Coming soon...
+Instructions for how to build and run examples are in [README.md](chapter9/README.md)
 ###  Chapter 10
-Coming soon...
+Instructions for how to build and run examples are in [README.md](chapter10/README.md)
 ###  Chapter 11
-Coming soon...
+Instructions for how to build and run examples are in [README.md](chapter11/README.md)
 ###  Chapter 12
-Coming soon...
-###  Chapter 13
+Instructions for how to build and run examples are in [README.md](chapter12/README.md)
 
 Cheers,
 Have Fun!
