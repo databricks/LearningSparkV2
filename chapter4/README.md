@@ -1,4 +1,4 @@
-This directory contains all the Scale and Python examples for chapter 4. 
+This directory contains all the Scala and Python examples for chapter 4. 
 
 To run Scala code for this chapter use:
 
