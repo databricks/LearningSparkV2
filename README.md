@@ -4,6 +4,10 @@ GitHub repo for the "Learning Spark 2nd Edition" code examples and notebooks.
 You can build all the JAR files for each chapter by running the Python script:
 `python build_jars.py`
 
+
+If you are using Databricks to run the code examples, you can import a .dbc file containing all of the notebooks (not the stand-alone apps) from the [notebooks](notebooks) folder. To sign up for a free Databricks Community Edition account, go to www.databricks.com/try-databricks.
+
+
 ###  Chapter 1
 Instructions for how to build and run examples are in [README.md](chapter1/README.md)
 ###  Chapter 2
@@ -28,8 +32,6 @@ Instructions for how to build and run examples are in [README.md](chapter10/READ
 Instructions for how to build and run examples are in [README.md](chapter11/README.md)
 ###  Chapter 12
 Instructions for how to build and run examples are in [README.md](chapter12/README.md)
-
-**If you are using Databricks to run the code examples, you can import a .dbc file containing all of the notebooks (not the stand-alone apps) from the [notebooks](notebooks) folder. To sign up for a free Databricks Community Edition account, go to www.databricks.com/try-databricks.**
 
 Cheers,
 Have Fun!
