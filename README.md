@@ -5,7 +5,10 @@ You can build all the JAR files for each chapter by running the Python script:
 `python build_jars.py`
 
 
-If you are using Databricks to run the code examples, you can import a .dbc file containing all of the notebooks (not the stand-alone apps) from the [notebooks](notebooks) folder. To sign up for a free Databricks Community Edition account, go to www.databricks.com/try-databricks.
+If you are using Databricks to run the notebook, you can import a LearninSparkV2.dbc file containing all of the notebooks for
+relevant chapters from the [notebooks](notebooks/LearningSparkv2.dbc) folder.
+ 
+To sign up for a free [Databricks Community Edition](https://www.databricks.com/try-databrick) account for free.
 
 ###  Chapter 2
 Instructions for how to build and run examples are in [README.md](chapter2/README.md)
