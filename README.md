@@ -7,9 +7,6 @@ You can build all the JAR files for each chapter by running the Python script:
 
 If you are using Databricks to run the code examples, you can import a .dbc file containing all of the notebooks (not the stand-alone apps) from the [notebooks](notebooks) folder. To sign up for a free Databricks Community Edition account, go to www.databricks.com/try-databricks.
 
-
-###  Chapter 1
-Instructions for how to build and run examples are in [README.md](chapter1/README.md)
 ###  Chapter 2
 Instructions for how to build and run examples are in [README.md](chapter2/README.md)
 ###  Chapter 3
@@ -22,17 +19,8 @@ Instructions for how to build and run examples are in [README.md](chapter5/READM
 Instructions for how to build and run examples are in [README.md](chapter6/README.md)
 ###  Chapter 7
 Instructions for how to build and run examples are in [README.md](chapter7/README.md)
-###  Chapter 8
-Instructions for how to build and run examples are in [README.md](chapter8/README.md)
-###  Chapter 9
-Instructions for how to build and run examples are in [README.md](chapter9/README.md)
-###  Chapter 10
-Instructions for how to build and run examples are in [README.md](chapter10/README.md)
-###  Chapter 11
-Instructions for how to build and run examples are in [README.md](chapter11/README.md)
-###  Chapter 12
-Instructions for how to build and run examples are in [README.md](chapter12/README.md)
 
 Cheers,
+
 Have Fun!
 --
