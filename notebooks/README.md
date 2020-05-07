@@ -1,19 +1,10 @@
-# Learning Spark 2nd Edition
-GitHub repo for the "Learning Spark 2nd Edition" code notebooks.
+## Running Notebooks
 
+We have provided Python and Scala notebooks in the LearningSparkv2.dbc file. Follow the steps below to import these notebooks into Databricks. Most of this code should run outside the Databricks environment.
 
-If you are using Databricks to run the notebook, you can import a LearninSparkv2.dbc file containing all of the notebooks for
-relevant chapters from the folder.
- 
-Sign up for a free [Databricks Community Edition](https://www.databricks.com/try-databrick) account for free.
+* Step 1: Register for a free [Databricks Community Edition](https://www.databricks.com/try-databricks) account
+* Step 2: Login
+* Step 3: Create a cluster with Spark 3.0 and Databricks Runtime 7.x ML. The ML runtime pre-installs many of the common ML libraries, some of which are used in chapter 11 (e.g. MLflow, XGBoost, etc.)
+* Step 4: [import a notebook](https://docs.databricks.com/notebooks/notebooks-manage.html#import-a-notebook).
 
-Follow this instructions to import notebook after signing into the Databricks Community Edition
-
-* Step 1:
-* Step 2:
-* Step 3:
-
-Cheers,
-
-Have Fun!
---
+Once you import these notebooks into Databricks, you can export them as an .ipynb and run them in a Jupyter notebook. To run Spark in a Jupyter notebook, follow these [instructions]().
