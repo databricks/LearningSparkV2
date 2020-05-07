@@ -6,7 +6,4 @@ Chapters [2](chapter2/README.md), [3](chapter3/README.md), [4](chapter4/README.m
 
 For all the other chapters, we have provided notebooks in the [notebooks](notebooks) folder. 
 
-Cheers,
-
-Have Fun!
---
+Have Fun, Cheers!
