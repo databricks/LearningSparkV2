@@ -5,5 +5,3 @@
 How to run the Example
 
 `spark-submit --class main.java.chapter6.Example6_3 jars/main-java-chapter6_2.12-1.0.jar`
-
-Have Fun Cheers
