@@ -1,4 +1,3 @@
-### How to run the code
-To run the Python code for this chapter use:
+To run the Python code for this chapter:
 
  * `spark-submit mnmcount.py data/mnm_dataset.csv`
