@@ -5,8 +5,8 @@ You can build all the JAR files for each chapter by running the Python script:
 `python build_jars.py`
 
 
-If you are using Databricks to run the notebook, you can import a LearninSparkV2.dbc file containing all of the notebooks for
-relevant chapters from the [notebooks](notebooks/LearningSparkv2.dbc) folder.
+If you are using Databricks to run the notebooks, you can import a LearninSparkV2.dbc file containing all of the notebooks for
+relevant chapters from the [notebooks](notebooks) folder.
  
 To sign up for a free [Databricks Community Edition](https://www.databricks.com/try-databrick) account for free.
 
