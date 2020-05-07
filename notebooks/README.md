@@ -1,6 +1,6 @@
 ## Running Notebooks
 
-We have provided Python and Scala notebooks in the LearningSparkv2.dbc file. Follow the steps below to import these notebooks into Databricks. Most of this code should also run outside the Databricks environment, such as Jupyter notebooks, but you will need to create your own `SparkSession`. 
+We have provided Python and Scala notebooks in the `LearningSparkv2.dbc` file. Follow the steps below to import these notebooks into Databricks. Most of this code should also run outside the Databricks environment, such as Jupyter notebooks, but you will need to create your own `SparkSession`. 
 
 * Step 1: Register for a free [Databricks Community Edition](https://www.databricks.com/try-databricks) account
 * Step 2: Login to Community Edition
