@@ -1,7 +1,3 @@
-This directory contains all the Scala examples for Chapter 7.
+This directory contains the Scala examples for Chapter 7.
 
-To use build and run thes examples cd in respective scala and follow simple
-intructions in relevant README.md files
-
-Have Fun
-Cheers!
+To build and run these examples cd in the scala directory and follow the instructions in the README.md file.
