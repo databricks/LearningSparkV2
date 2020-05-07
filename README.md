@@ -16,8 +16,6 @@ Instructions for how to build and run examples are in [README.md](chapter2/READM
 Instructions for how to build and run examples are in [README.md](chapter3/README.md)
 ###  Chapter 4
 Instructions for how to build and run examples are in [README.md](chapter4/README.md)
-###  Chapter 5
-Instructions for how to build and run examples are in [README.md](chapter5/README.md)
 ###  Chapter 6
 Instructions for how to build and run examples are in [README.md](chapter6/README.md)
 ###  Chapter 7

@@ -1,6 +1,7 @@
-This directory contains all the Scala examples for Chapter 2. Along with the code to generate the M&Ms data set.
+This directory contains all the Scala and Python examples for Chapter 2. Along with the code to generate the M&Ms data set.
 
-The equivalent code for Scala is in the scala directory, along instructions how to build the jar.
+To use build and run thes examples cd in respective Scala and Python directory and follow simple
+intructions in relevant README.md files.
 
 Have Fun
 Cheers!
