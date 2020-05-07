@@ -1,7 +1,3 @@
-This directory contains all the Java examples and notebooks for Chapter 6.
+This directory contains the Java examples for Chapter 6.
 
-To use build and run thes examples cd in respective java directory and follow simple
-intructions in relevant README.md files
-
-Have Fun
-Cheers!
+To build and run these examples cd in the java directory and follow the instructions in the README.md file.
