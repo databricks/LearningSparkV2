@@ -4,7 +4,7 @@
  3. cp main-scala-chapter7_2.12-1.0.jar from the target/scala-2.12 directory into the jars/
 
 ### How to run the example
-To run Scala code for this chapter use:
+To run the Scala code for this chapter use:
 
  * `spark-submit --class main.scala.chapter7.SparkConfig_7_1 jars/main-scala-chapter7_2.12-1.0.jar`
  * `spark-submit --conf spark.sql.shuffle.partitions=5 --conf "spark.executor.memory=2g" --class main.scala.chapter7.SparkConfig_7_1 jars/main-scala-chapter7_2.12-1.0.jar`
