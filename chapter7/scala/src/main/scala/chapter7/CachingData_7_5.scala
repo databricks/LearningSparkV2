@@ -49,8 +49,8 @@ object CachingData_7_5 {
 		val (res4, tm4) = timer(spark.sql("select count(*) from dfTable").show())
 		println(s"***** Count=${res4} and time=${tm4}")
 
-		// to view the SparkUI otherwise the program terminates and shutdowsn the UI
-		Thread.sleep(200000000)
+		// uncomment to view the SparkUI otherwise the program terminates and shutdowsn the UI
+		// Thread.sleep(200000000)
 
 		// unpersist
 		df.unpersist()

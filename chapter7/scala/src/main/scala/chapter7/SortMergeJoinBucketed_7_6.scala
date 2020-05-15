@@ -77,7 +77,7 @@ object SortMergeJoinBucketed_7_6 {
     joinUsersOrdersBucketDF.explain()
     //joinUsersOrdersBucketDF.explain("formatted")
 
-    // to view the SparkUI otherwise the program terminates and shutdowsn the UI
-    Thread.sleep(200000000)
+    // uncomment to view the SparkUI otherwise the program terminates and shutdowsn the UI
+    // Thread.sleep(200000000)
   }
 }
