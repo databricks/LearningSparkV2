@@ -51,8 +51,8 @@ object SortMergeJoin_7_6 {
     usersOrdersDF.show(10, false)
     usersOrdersDF.cache()
     usersOrdersDF.explain()
-    //usersOrdersDF.explain("formated")
-    // to view the SparkUI otherwise the program terminates and shutdowsn the UI
-    Thread.sleep(200000000)
+    // usersOrdersDF.explain("formated")
+    // uncoment to view the SparkUI otherwise the program terminates and shutdowsn the UI
+    // Thread.sleep(200000000)
   }
 }

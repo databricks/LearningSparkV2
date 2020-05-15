@@ -20,6 +20,6 @@ def build_jar_files(dir):
 
 if __name__ == '__main__':
     # List of chapters to build Scala or Java jars
-    chapters = ["chapter2", "chapter3", "chapter4", "chapter6", "chapter7"]
-    with Pool(5) as p:
+    chapters = ["chapter2", "chapter3", "chapter6", "chapter7"]
+    with Pool(4) as p:
         p.map(build_jar_files, chapters)

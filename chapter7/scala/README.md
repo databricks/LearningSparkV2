@@ -1,10 +1,14 @@
 ### How to build the package
  1. sbt clean package
  2. mkdir jars
- 3. cp main-scala-chapter7_2.12-1.0.jar from the target/scala-2.12 directory into the jars/
+ 3. cp target/scala-2.12/main-scala-chapter7_2.12-1.0.jar jars/
+ 
+** Note**:" Some of these standalone applications such as `SparkConfig_7_1`, `Partitions_7_2`, `
+MapAndMapPartitions_7_3`, `MapAndMapPartitions_7_3`, and `CachingData_7_5` are extras; they are not part of 
+the chapter 7 discourse but here for exploration.
 
 ### How to run the example
-To run the Scala code for this chapter use:
+To run the Scala code for this chapter use: 
 
  * `spark-submit --class main.scala.chapter7.SparkConfig_7_1 jars/main-scala-chapter7_2.12-1.0.jar`
  * `spark-submit --conf spark.sql.shuffle.partitions=5 --conf "spark.executor.memory=2g" --class main.scala.chapter7.SparkConfig_7_1 jars/main-scala-chapter7_2.12-1.0.jar`
