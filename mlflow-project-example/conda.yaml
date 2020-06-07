@@ -1,0 +1,10 @@
+name: mlflow-project-example
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - pandas=0.24
+  - pip=19.0.3
+  - pip:
+    - mlflow==1.8
+    - pyspark==2.4.5

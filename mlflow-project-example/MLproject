@@ -1,0 +1,11 @@
+name: mlflow-project-example
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      file_path: {type: str, default: "data/sf-airbnb-clean.parquet"}
+      num_trees: {type: int, default: 20}
+      max_depth: {type: int, default: 5}
+    command: "python train.py --file_path {file_path} --num_trees {num_trees} --max_depth {max_depth}"
