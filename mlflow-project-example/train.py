@@ -22,16 +22,14 @@ def mlflow_rf(file_path, num_trees, max_depth):
     (trainDF, testDF) = airbnbDF.randomSplit([.8, .2], seed=42)
 
     # Prepare the StringIndexer and VectorAssembler
-    categoricalColumns = [field for (field, dataType) in trainDF.dtypes if dataType == "string"]
-    stages = [] 
-    for categoricalCol in categoricalColumns:
-        stages += [StringIndexer(inputCol=categoricalCol, outputCol=categoricalCol + "Index", handleInvalid="skip")]
+    categoricalCols = [field for (field, dataType) in trainDF.dtypes if dataType == "string"]
+    indexOutputCols = [x + "Index" for x in categoricalCols]
 
-    indexCols = [c + "Index" for c in categoricalColumns]
+    stringIndexer = StringIndexer(inputCols=categoricalCols, outputCols=indexOutputCols, handleInvalid="skip")
+
     numericCols = [field for (field, dataType) in trainDF.dtypes if ((dataType == "double") & (field != "price"))]
-    assemblerInputs = indexCols + numericCols
+    assemblerInputs = indexOutputCols + numericCols
     vecAssembler = VectorAssembler(inputCols=assemblerInputs, outputCol="features")
-    stages += [vecAssembler]
     
     # Log params: Num Trees and Max Depth
     mlflow.log_param("num_trees", num_trees)
@@ -42,8 +40,8 @@ def mlflow_rf(file_path, num_trees, max_depth):
                                maxDepth=max_depth,
                                numTrees=num_trees,
                                seed=42)
-    stages += [rf]
-    pipeline = Pipeline(stages=stages)
+
+    pipeline = Pipeline(stages=[stringIndexer, vecAssembler, rf])
 
     # Log model
     pipelineModel = pipeline.fit(trainDF)
