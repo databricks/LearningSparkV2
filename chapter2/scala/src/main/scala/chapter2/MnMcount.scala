@@ -28,13 +28,14 @@ object MnMcount {
       .load(mnmFile)
     // display DataFrame
     mnmDF.show(5, false)
+
     // aggregate count of all colors and groupBy state and color
     // orderBy descending order
     val countMnMDF = mnmDF.select("State", "Color", "Count")
         .groupBy("State", "Color")
-        .agg(count("Count")
-        .alias("Total"))
-        .orderBy(desc("Total"))
+        .sum("Count")
+        .orderBy(desc("sum(Count)"))
+
     // show all the resulting aggregation for all the dates and colors
     countMnMDF.show(60)
     println(s"Total Rows = ${countMnMDF.count()}")
@@ -44,9 +45,9 @@ object MnMcount {
     val caCountMnNDF = mnmDF.select("*")
       .where(col("State") === "CA")
       .groupBy("State", "Color")
-      .agg(count("Count")
-      .alias("Total"))
-      .orderBy(desc("Total"))
+      .sum("Count")
+      .orderBy(desc("sum(Count)"))
+
     // show the resulting aggregation for California
     caCountMnNDF.show(10)
   }
