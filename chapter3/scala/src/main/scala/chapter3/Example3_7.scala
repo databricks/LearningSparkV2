@@ -32,8 +32,8 @@ object Example3_7 {
     //show the DataFrame schema as output
     blogsDF.show(truncate = false)
     // print the schemas
-    print(blogsDF.printSchema)
-    print(blogsDF.schema)
+    println(blogsDF.printSchema)
+    println(blogsDF.schema)
     // Show columns and expressions
     blogsDF.select(expr("Hits") * 2).show(2)
     blogsDF.select(col("Hits") * 2).show(2)
