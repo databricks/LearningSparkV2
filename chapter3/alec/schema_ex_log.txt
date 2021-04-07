@@ -1,0 +1,115 @@
+21/03/20 21:28:29 WARN Utils: Your hostname, LAPTOP-RDRHDDED resolves to a loopback address: 127.0.1.1; using 172.23.139.11 instead (on interface eth0)
+21/03/20 21:28:29 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/mnt/c/Users/Alec/MyScala/spark-3.0.2-bin-hadoop2.7/jars/spark-unsafe_2.12-3.0.2.jar) to constructor java.nio.DirectByteBuffer(long,int)
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+21/03/20 21:28:31 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/03/20 21:28:31 INFO SparkContext: Running Spark version 3.0.2
+21/03/20 21:28:31 INFO ResourceUtils: ==============================================================
+21/03/20 21:28:31 INFO ResourceUtils: Resources for spark.driver:
+
+21/03/20 21:28:31 INFO ResourceUtils: ==============================================================
+21/03/20 21:28:31 INFO SparkContext: Submitted application: Chapter3 - Schema Example
+21/03/20 21:28:32 INFO SecurityManager: Changing view acls to: aschneide33
+21/03/20 21:28:32 INFO SecurityManager: Changing modify acls to: aschneide33
+21/03/20 21:28:32 INFO SecurityManager: Changing view acls groups to: 
+21/03/20 21:28:32 INFO SecurityManager: Changing modify acls groups to: 
+21/03/20 21:28:32 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(aschneide33); groups with view permissions: Set(); users  with modify permissions: Set(aschneide33); groups with modify permissions: Set()
+21/03/20 21:28:32 INFO Utils: Successfully started service 'sparkDriver' on port 42371.
+21/03/20 21:28:32 INFO SparkEnv: Registering MapOutputTracker
+21/03/20 21:28:32 INFO SparkEnv: Registering BlockManagerMaster
+21/03/20 21:28:33 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/03/20 21:28:33 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/03/20 21:28:33 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/03/20 21:28:33 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-adb9aa56-4d26-4d0b-9ea3-9f4bb6378b77
+21/03/20 21:28:33 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+21/03/20 21:28:33 INFO SparkEnv: Registering OutputCommitCoordinator
+21/03/20 21:28:33 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+21/03/20 21:28:33 INFO Utils: Successfully started service 'SparkUI' on port 4041.
+21/03/20 21:28:33 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://172.23.139.11:4041
+21/03/20 21:28:34 INFO SparkContext: Added JAR file:/mnt/c/Users/Alec/MyScala/LearningSparkV2/chapter3/alec/target/scala-2.12/main-scala-chapter3_2.12-1.0.jar at spark://172.23.139.11:42371/jars/main-scala-chapter3_2.12-1.0.jar with timestamp 1616290111877
+21/03/20 21:28:34 INFO Executor: Starting executor ID driver on host 172.23.139.11
+21/03/20 21:28:34 INFO Executor: Fetching spark://172.23.139.11:42371/jars/main-scala-chapter3_2.12-1.0.jar with timestamp 1616290111877
+21/03/20 21:28:34 INFO TransportClientFactory: Successfully created connection to /172.23.139.11:42371 after 79 ms (0 ms spent in bootstraps)
+21/03/20 21:28:34 INFO Utils: Fetching spark://172.23.139.11:42371/jars/main-scala-chapter3_2.12-1.0.jar to /tmp/spark-1481231f-d1ce-4b4e-91c7-428c1c30e84d/userFiles-2c8069ef-ab57-427d-b66b-ed619e958f3b/fetchFileTemp18219891726189092151.tmp
+21/03/20 21:28:34 INFO Executor: Adding file:/tmp/spark-1481231f-d1ce-4b4e-91c7-428c1c30e84d/userFiles-2c8069ef-ab57-427d-b66b-ed619e958f3b/main-scala-chapter3_2.12-1.0.jar to class loader
+21/03/20 21:28:34 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41227.
+21/03/20 21:28:34 INFO NettyBlockTransferService: Server created on 172.23.139.11:41227
+21/03/20 21:28:34 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/03/20 21:28:34 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 172.23.139.11, 41227, None)
+21/03/20 21:28:34 INFO BlockManagerMasterEndpoint: Registering block manager 172.23.139.11:41227 with 434.4 MiB RAM, BlockManagerId(driver, 172.23.139.11, 41227, None)
+21/03/20 21:28:34 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 172.23.139.11, 41227, None)
+21/03/20 21:28:34 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 172.23.139.11, 41227, None)
+21/03/20 21:28:35 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/mnt/c/Users/Alec/MyScala/LearningSparkV2/chapter3/alec/spark-warehouse').
+21/03/20 21:28:35 INFO SharedState: Warehouse path is 'file:/mnt/c/Users/Alec/MyScala/LearningSparkV2/chapter3/alec/spark-warehouse'.
+21/03/20 21:28:37 INFO InMemoryFileIndex: It took 70 ms to list leaf files for 1 paths.
+21/03/20 21:28:41 INFO FileSourceStrategy: Pushed Filters: 
+21/03/20 21:28:41 INFO FileSourceStrategy: Post-Scan Filters: 
+21/03/20 21:28:41 INFO FileSourceStrategy: Output Data Schema: struct<Id: int, First: string, Last: string, Url: string, Published: string ... 5 more fields>
+21/03/20 21:28:42 INFO CodeGenerator: Code generated in 588.1427 ms
+21/03/20 21:28:42 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 171.5 KiB, free 434.2 MiB)
+21/03/20 21:28:42 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 24.1 KiB, free 434.2 MiB)
+21/03/20 21:28:42 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 172.23.139.11:41227 (size: 24.1 KiB, free: 434.4 MiB)
+21/03/20 21:28:42 INFO SparkContext: Created broadcast 0 from show at schema_ex.scala:33
+21/03/20 21:28:42 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+21/03/20 21:28:43 INFO SparkContext: Starting job: show at schema_ex.scala:33
+21/03/20 21:28:43 INFO DAGScheduler: Got job 0 (show at schema_ex.scala:33) with 1 output partitions
+21/03/20 21:28:43 INFO DAGScheduler: Final stage: ResultStage 0 (show at schema_ex.scala:33)
+21/03/20 21:28:43 INFO DAGScheduler: Parents of final stage: List()
+21/03/20 21:28:43 INFO DAGScheduler: Missing parents: List()
+21/03/20 21:28:43 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at show at schema_ex.scala:33), which has no missing parents
+21/03/20 21:28:43 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 14.8 KiB, free 434.2 MiB)
+21/03/20 21:28:43 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.8 KiB, free 434.2 MiB)
+21/03/20 21:28:43 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 172.23.139.11:41227 (size: 6.8 KiB, free: 434.4 MiB)
+21/03/20 21:28:43 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1223
+21/03/20 21:28:43 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at show at schema_ex.scala:33) (first 15 tasks are for partitions Vector(0))
+21/03/20 21:28:43 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+21/03/20 21:28:43 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, 172.23.139.11, executor driver, partition 0, PROCESS_LOCAL, 7776 bytes)
+21/03/20 21:28:43 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+21/03/20 21:28:43 INFO FileScanRDD: Reading File path: file:///mnt/c/Users/Alec/MyScala/LearningSparkV2/chapter3/scala/data/blogs.json, range: 0-915, partition values: [empty row]
+21/03/20 21:28:43 INFO CodeGenerator: Code generated in 33.0066 ms
+21/03/20 21:28:43 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1944 bytes result sent to driver
+21/03/20 21:28:43 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 473 ms on 172.23.139.11 (executor driver) (1/1)
+21/03/20 21:28:43 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+21/03/20 21:28:43 INFO DAGScheduler: ResultStage 0 (show at schema_ex.scala:33) finished in 0.679 s
+21/03/20 21:28:43 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+21/03/20 21:28:43 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+21/03/20 21:28:43 INFO DAGScheduler: Job 0 finished: show at schema_ex.scala:33, took 0.779785 s
+21/03/20 21:28:44 INFO CodeGenerator: Code generated in 50.2287 ms
++---+---------+-------+-----------------+---------+-----+----------------------------+
+|Id |First    |Last   |Url              |Published|Hits |Campaigns                   |
++---+---------+-------+-----------------+---------+-----+----------------------------+
+|1  |Jules    |Damji  |https://tinyurl.1|1/4/2016 |4535 |[twitter, LinkedIn]         |
+|2  |Brooke   |Wenig  |https://tinyurl.2|5/5/2018 |8908 |[twitter, LinkedIn]         |
+|3  |Denny    |Lee    |https://tinyurl.3|6/7/2019 |7659 |[web, twitter, FB, LinkedIn]|
+|4  |Tathagata|Das    |https://tinyurl.4|5/12/2018|10568|[twitter, FB]               |
+|5  |Matei    |Zaharia|https://tinyurl.5|5/14/2014|40578|[web, twitter, FB, LinkedIn]|
+|6  |Reynold  |Xin    |https://tinyurl.6|3/2/2015 |25568|[twitter, LinkedIn]         |
++---+---------+-------+-----------------+---------+-----+----------------------------+
+
+root
+ |-- Id: integer (nullable = true)
+ |-- First: string (nullable = true)
+ |-- Last: string (nullable = true)
+ |-- Url: string (nullable = true)
+ |-- Published: string (nullable = true)
+ |-- Hits: integer (nullable = true)
+ |-- Campaigns: array (nullable = true)
+ |    |-- element: string (containsNull = true)
+
+()
+StructType(StructField(Id,IntegerType,true), StructField(First,StringType,true), StructField(Last,StringType,true), StructField(Url,StringType,true), StructField(Published,StringType,true), StructField(Hits,IntegerType,true), StructField(Campaigns,ArrayType(StringType,true),true))
+21/03/20 21:28:44 INFO SparkContext: Invoking stop() from shutdown hook
+21/03/20 21:28:44 INFO SparkUI: Stopped Spark web UI at http://172.23.139.11:4041
+21/03/20 21:28:44 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+21/03/20 21:28:44 INFO MemoryStore: MemoryStore cleared
+21/03/20 21:28:44 INFO BlockManager: BlockManager stopped
+21/03/20 21:28:44 INFO BlockManagerMaster: BlockManagerMaster stopped
+21/03/20 21:28:44 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+21/03/20 21:28:44 INFO SparkContext: Successfully stopped SparkContext
+21/03/20 21:28:44 INFO ShutdownHookManager: Shutdown hook called
+21/03/20 21:28:44 INFO ShutdownHookManager: Deleting directory /tmp/spark-1481231f-d1ce-4b4e-91c7-428c1c30e84d
+21/03/20 21:28:44 INFO ShutdownHookManager: Deleting directory /tmp/spark-55886ce6-1141-42a1-8b11-41f276474e33
