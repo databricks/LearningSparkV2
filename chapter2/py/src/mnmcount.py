@@ -3,7 +3,6 @@ from __future__ import print_function
 import sys
 
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import count
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
