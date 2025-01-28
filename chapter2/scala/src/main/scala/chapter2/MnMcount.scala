@@ -42,14 +42,14 @@ object MnMcount {
     println()
 
     // find the aggregate count for California by filtering
-    val caCountMnNDF = mnmDF.select("*")
+    val caCountMnMDF = mnmDF.select("*")
       .where(col("State") === "CA")
       .groupBy("State", "Color")
       .sum("Count")
       .orderBy(desc("sum(Count)"))
 
     // show the resulting aggregation for California
-    caCountMnNDF.show(10)
+    caCountMnMDF.show(10)
   }
 }
 // scalastyle:on println
