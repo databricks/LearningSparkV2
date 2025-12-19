@@ -1,6 +1,10 @@
 from pyspark.sql.types import *
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
+import os
+
+# Set Java system properties to fix Java 23 compatibility issues
+os.environ["PYSPARK_SUBMIT_ARGS"] = "--conf spark.driver.extraJavaOptions='-Djava.security.manager=allow' --conf spark.executor.extraJavaOptions='-Djava.security.manager=allow' pyspark-shell"
 
 # define schema for our data
 schema = StructType([
@@ -26,6 +30,10 @@ if __name__ == "__main__":
    spark = (SparkSession
        .builder
        .appName("Example-3_6")
+       .config("spark.driver.extraJavaOptions", "-Djava.security.manager=allow")
+       .config("spark.executor.extraJavaOptions", "-Djava.security.manager=allow")
+       .config("spark.sql.adaptive.enabled", "false")
+       .config("spark.sql.adaptive.coalescePartitions.enabled", "false")
        .getOrCreate())
    # create a DataFrame using the schema defined above
    blogs_df = spark.createDataFrame(data, schema)
@@ -41,3 +49,6 @@ if __name__ == "__main__":
    # show heavy hitters
    blogs_df.withColumn("Big Hitters", (expr("Hits > 10000"))).show()
    print(blogs_df.schema)
+   
+   # Stop the Spark session
+   spark.stop()

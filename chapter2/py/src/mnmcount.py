@@ -1,6 +1,7 @@
 from __future__ import print_function
 
 import sys
+import os
 
 from pyspark.sql import SparkSession
 
@@ -9,9 +10,16 @@ if __name__ == "__main__":
         print("Usage: mnmcount <file>", file=sys.stderr)
         sys.exit(-1)
 
+    # Set Java system properties to fix Java 23 compatibility issues
+    os.environ["PYSPARK_SUBMIT_ARGS"] = "--conf spark.driver.extraJavaOptions='-Djava.security.manager=allow' --conf spark.executor.extraJavaOptions='-Djava.security.manager=allow' pyspark-shell"
+
     spark = (SparkSession
         .builder
         .appName("PythonMnMCount")
+        .config("spark.driver.extraJavaOptions", "-Djava.security.manager=allow")
+        .config("spark.executor.extraJavaOptions", "-Djava.security.manager=allow")
+        .config("spark.sql.adaptive.enabled", "false")
+        .config("spark.sql.adaptive.coalescePartitions.enabled", "false")
         .getOrCreate())
     # get the M&M data set file name
     mnm_file = sys.argv[1]
@@ -42,4 +50,7 @@ if __name__ == "__main__":
 
     # show the resulting aggregation for California
     ca_count_mnm_df.show(n=10, truncate=False)
+    
+    # Stop the Spark session
+    spark.stop()
 
